@@ -1,0 +1,1 @@
+<?php /**PATH E:\laragon\www\datn\resources\views/layouts/user/master.blade.php ENDPATH**/ ?>
