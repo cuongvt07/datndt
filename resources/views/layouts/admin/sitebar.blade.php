@@ -3,7 +3,7 @@
         <!-- Logo Header -->
         <div class="logo-header" data-background-color="white">
             <a href="{{ route('admin.dashboard') }}" class="logo">
-                <img src="{{ asset('fav/23.png') }}" width="200px" height="200px" alt="navbar brand" class="navbar-brand"
+                <img src="https://th.bing.com/th/id/OIP.aJsHBdiH8uxOMvKnxI510AHaF7?rs=1&pid=ImgDetMain" width="50px" height="50px" alt="navbar brand" class="navbar-brand"
                     height="20" />
             </a>
             <div class="nav-toggle">

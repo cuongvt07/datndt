@@ -2741,6 +2741,35 @@ only screen and (max-width: 767.98px) {
   .hero-overlay:before {
     display: block;
   }
+
+  .row {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: nowrap !important;
+  }
+
+  .hero-slider-item {
+    width: 100% !important;
+  }
+
+  .blog-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shop-product-wrap {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header-right.d-flex.align-items-center.justify-content-xl-between.justify-content-lg-end {
+    padding: 10px 0;
+  }
 }
 
 /*------ hero slider area css end ------*/

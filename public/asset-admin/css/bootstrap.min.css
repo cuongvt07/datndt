@@ -2381,6 +2381,11 @@ progress {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch
     }
+
+    .row {
+        display: flex;
+        flex-decoration: column;
+    }
 }
 
 @media (max-width:991.98px) {

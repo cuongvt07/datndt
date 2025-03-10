@@ -453,28 +453,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <!-- section title start -->
+                    <!-- Section title -->
                     <div class="section-title text-center">
                         <h2 class="title">Bài viết mới nhất</h2>
                         <p class="sub-title">Có những bài đăng blog mới nhất</p>
                     </div>
-                    <!-- section title start -->
                 </div>
             </div>
-            <div class="row">
-                <!-- Bài viết start -->
+            <!-- Slider container -->
+            <div class="latest-blog-slider">
                 @foreach ($recentPosts as $recentPost)
-                    <div class="blog-post-item" style="display: flex; margin-left: 10px;">
+                    <div class="blog-post-item">
                         <div class="al">
                             <figure class="blog-thumb">
                                 <a href="{{ route('user.posts.show', $recentPost->id) }}">
                                     @if ($recentPost->video)
                                         <!-- Nếu có video, hiển thị video -->
                                         <div class="video-container">
-                                            <iframe
-                                                src="https://www.youtube.com/embed/{{ \Illuminate\Support\Str::after($recentPost->video, 'v=') }}"
-                                                frameborder="0" allowfullscreen width="350px"
-                                                height="257px"></iframe>
+                                            <iframe src="https://www.youtube.com/embed/{{ \Illuminate\Support\Str::after($recentPost->video, 'v=') }}"
+                                                frameborder="0" allowfullscreen width="350px" height="257px"></iframe>
                                         </div>
                                     @elseif ($recentPost->image)
                                         <!-- Nếu không có video, hiển thị ảnh -->
@@ -486,24 +483,21 @@
                             </figure>
                             <div class="blog-content">
                                 <div class="blog-meta">
-                                    <p>{{ $recentPost->created_at->format('F d, Y') }} | <a
-                                            href="#">StorePhone</a>
-                                    </p>
+                                    <p>{{ $recentPost->created_at->format('F d, Y') }} | <a href="#">StorePhone</a></p>
                                 </div>
                                 <h4 class="blog-title">
                                     <a href="{{ route('user.posts.show', $recentPost->id) }}">
                                         {{ \Illuminate\Support\Str::limit($recentPost->title, 20, '...') }}
                                     </a>
                                 </h4>
-
                             </div>
                         </div>
-
                     </div>
                 @endforeach
             </div>
         </div>
     </section>
+
     <!-- Hết Blog -->
 </main>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
